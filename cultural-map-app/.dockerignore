@@ -1,0 +1,55 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Gradle files
+.gradle
+gradle/
+gradlew
+gradlew.bat
+build/
+!build/libs/ # Keep the libs folder in build, specifically the JAR
+!build/libs/*.jar # Explicitly include JARs in build/libs
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Build outputs from other tools/languages if they existed
+# node_modules/
+# .DS_Store
+# target/ (if it were Maven)
+
+# Log files
+*.log
+
+# Test reports (often generated in build directory, but good to specify if elsewhere)
+build/reports/
+build/test-results/
+
+# Source code (as the JAR is self-contained)
+src/
+
+# Docker files themselves (if they are in the same directory and you don't want them in image layers)
+Dockerfile
+.dockerignore
+
+# Local user specific files
+*.local
+*.userprefs
+*.DS_Store
+*~
+*.swp
+*.swo
+
+# Secrets or local config not meant for the image
+# application-local.properties
+# .env
+# secrets/
+# !secrets/.gitkeep # example if secrets dir is versioned but content is ignored
